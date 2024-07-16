@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap');
 
-/*----Colour, Text*/
+/*----Text,Titles-----*/
 #game-title{
     font-family: "Teko", 'Sans-Serif';
     text-align: center;
@@ -12,10 +12,43 @@
     font-family: "Teko", 'Sans-Serif';
 }
 
-/*----Game Area Structure*/
-.game-content {
-    background-color: rgb(216, 101, 25);
+/*----Colour----*/
+.playground {
+    background-color: black;
 }
+.blue {
+    background-color: #345995;
+}
+.cyan {
+    background-color: #a8f0f5;
+}
+.yellow {
+    background-color: #EAC435;
+}
+.green {
+    background-color: #3F612D;
+}
+.red {
+    background-color: #FB4D3D;
+}
+.orange {
+    background-color: #F9A620;
+}
+.purple {
+    background-color: #726DA8;
+}
+.pink {
+    background-color: #FF86C8;
+} 
+.white {
+    background-color: #FBFEF9;
+}
+
+/*----Game Area Structure*/
+.playground {
+    padding-top: 10px;
+}
+
 .row {
 text-align: center;
 }
@@ -24,8 +57,9 @@ text-align: center;
 display: inline-block;
 width: 100px;
 height: 100px;
-background-color: #b6b2b2;
 cursor: pointer;
+margin-left: 2px;
+margin-right: 2px;
 }
 
 .square:hover {
@@ -38,10 +72,15 @@ cursor: pointer;
 form {
     text-align: center;
 }
+
+.start-btn,.enter-btn{
+    cursor: pointer;
+}
 .select-cells-level{
     width: 70px;
 }
 
-.hidden{
+#how-to-play{
     display: none;
 }
+

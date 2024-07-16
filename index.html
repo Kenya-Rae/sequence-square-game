@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="assets/css/style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 
     <title>Sequence Squares</title>
 </head>
@@ -16,61 +18,55 @@
      <!--Starter page buttons-->
     <div class="container" id="homepage-buttons">
         <button class="play button" onclick="">Play!</button>
-        <button id="instructions-button" onclick="">Instructions</button>
+        <button id="instructionsButton" onclick="howTo()">Instructions</button>
     </div>
 
      <!--Instructions-->
-    <div id="how-to-play" class="hidden">
+    <div id="how-to-play">
         <h2> How to Play?</h2>
         <ol class="list-rules">
-            <li>Press "Play!". </li>
-            <li>Select a level via the drop down above and press "start".</li>
+            <li>Press <em>"Play!"</em>. </li>
+            <li>Select a level via the drop down above and press <em>"Start"</em>.</li>
             <li>Squares will display, you will be shown a sequence that you will need to repeat.</li>
             <li>The sequence will light up, once the sequence has finished, repeat the sequence that had lit up.  </li>
-            <li>Press enter to submit your sequence.</li>
+            <li>Press <em>"Enter"</em> to submit your sequence.</li>
         </ol>
     </div>
 
     <!--Game Area Structure-->
     <div class="game-content container">
-        <form> <button class="start-btn"> Start</button>
+        <form> 
+            <button class="start-btn"> Start</button>
+            <span class="info hidden"></span>
             <select name="levels" class="select-cells-level">
                 <option value="easy" selected>Easy</option>
-                <option value="medium" selected>Medium</option>
-                <option value="hard" selected>Hard</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
             </select>
+            <button class="enter-btn" onclick="">Enter</button>
         </form>
 
-       <div class="row">
-        <div class="square"></div>
-        <div class="square"></div>
-        <div class="square"></div>
-        <div class="square"></div>
-       </div>
+        <div class="playground">
+            <div class="row">
+                <div class="square blue"></div>
+                <div class="square cyan"></div>
+                <div class="square yellow"></div>
+            </div>
 
-       <div class="row">
-        <div class="square"></div>
-        <div class="square"></div>
-        <div class="square"></div>
-        <div class="square"></div>
-       </div>
+            <div class="row">
+                <div class="square green"></div>
+                <div class="square red"></div>
+                <div class="square orange"></div>
+            </div>
 
-       <div class="row">
-        <div class="square"></div>
-        <div class="square"></div>
-        <div class="square"></div>
-        <div class="square"></div>
-       </div>
-
-       <div class="row">
-        <div class="square"></div>
-        <div class="square"></div>
-        <div class="square"></div>
-        <div class="square"></div>
-       </div>
-       <button class="enter-btn" onclick="">Enter</button>
+            <div class="row">
+                <div class="square purple"></div>
+                <div class="square pink"></div>
+                <div class="square white"></div>
+            </div>
+        </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
