@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <title>Sequence Squares</title>
+</head>
+<body>
+    <!--Header container for the game title-->
+    <div class="container">
+        <h1 id="game-title"> Sequence Squares</h1>
+    </div>
+
+     <!--Starter page buttons-->
+    <div class="container" id="homepage-buttons">
+        <button class="play button" onclick="">Play!</button>
+        <button id="instructions-button" onclick="">Instructions</button>
+    </div>
+
+     <!--Instructions-->
+    <div id="how-to-play" class="hidden">
+        <h2> How to Play?</h2>
+        <ol class="list-rules">
+            <li>Press "Play!". </li>
+            <li>Select a level via the drop down above and press "start".</li>
+            <li>Squares will display, you will be shown a sequence that you will need to repeat.</li>
+            <li>The sequence will light up, once the sequence has finished, repeat the sequence that had lit up.  </li>
+            <li>Press enter to submit your sequence.</li>
+        </ol>
+    </div>
+
+    <!--Game Area Structure-->
+    <div class="game-content container">
+        <form> <button class="start-btn"> Start</button>
+            <select name="levels" class="select-cells-level">
+                <option value="easy" selected>Easy</option>
+                <option value="medium" selected>Medium</option>
+                <option value="hard" selected>Hard</option>
+            </select>
+        </form>
+
+       <div class="row">
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+       </div>
+
+       <div class="row">
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+       </div>
+
+       <div class="row">
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+       </div>
+
+       <div class="row">
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+       </div>
+       <button class="enter-btn" onclick="">Enter</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
