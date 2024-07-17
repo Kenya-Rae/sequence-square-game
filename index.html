@@ -10,62 +10,40 @@
     <title>Sequence Squares</title>
 </head>
 <body>
-    <!--Header container for the game title-->
-    <div class="container">
+    <!--Header for the game-->
         <h1 id="game-title"> Sequence Squares</h1>
-    </div>
 
      <!--Starter page buttons-->
     <div class="container" id="homepage-buttons">
-        <button class="play button" onclick="">Play!</button>
-        <button id="instructionsButton" onclick="howTo()">Instructions</button>
+        <button class="button" onclick="newGame()">Start</button>
+        <button id="instructionsButton" onclick="howTo">Instructions</button>
     </div>
 
      <!--Instructions-->
     <div id="how-to-play">
         <h2> How to Play?</h2>
         <ol class="list-rules">
-            <li>Press <em>"Play!"</em>. </li>
-            <li>Select a level via the drop down above and press <em>"Start"</em>.</li>
-            <li>Squares will display, you will be shown a sequence that you will need to repeat.</li>
-            <li>The sequence will light up, once the sequence has finished, repeat the sequence that had lit up.  </li>
-            <li>Press <em>"Enter"</em> to submit your sequence.</li>
+            <li>Press <em>"Start"</em>. </li>
+            <li>You will be shown a sequence that you will need to repeat.</li>
+            <li>The sequence will light up, once the sequence has finished, repeat the sequence in the same order.  </li>
         </ol>
     </div>
 
     <!--Game Area Structure-->
-    <div class="game-content container">
-        <form> 
-            <button class="start-btn"> Start</button>
-            <span class="info hidden"></span>
-            <select name="levels" class="select-cells-level">
-                <option value="easy" selected>Easy</option>
-                <option value="medium">Medium</option>
-                <option value="hard">Hard</option>
-            </select>
-            <button class="enter-btn" onclick="">Enter</button>
-        </form>
-
-        <div class="playground">
-            <div class="row">
-                <div class="square blue"></div>
-                <div class="square cyan"></div>
-                <div class="square yellow"></div>
-            </div>
-
-            <div class="row">
-                <div class="square green"></div>
-                <div class="square red"></div>
-                <div class="square orange"></div>
-            </div>
-
-            <div class="row">
-                <div class="square purple"></div>
-                <div class="square pink"></div>
-                <div class="square white"></div>
-            </div>
+    <div class="scorebox" id="scores">0</div>
+        <div class="playground grid-container">
+            
+                <div class="square blue grid-item" data-id="button1" data-listener="false"></div>
+                <div class="square cyan grid-item" data-id="button2" data-listener="false"></div>
+                <div class="square yellow grid-item" data-id="button3" data-listener="false"></div>
+                <div class="square green grid-item" data-id="button4" data-listener="false"></div>
+                <div class="square red grid-item" data-id="button5" data-listener="false"></div>
+                <div class="square orange grid-item" data-id="button6" data-listener="false"></div>
+                <div class="square purple grid-item" data-id="button7" data-listener="false"></div>
+                <div class="square pink grid-item" data-id="button8" data-listener="false"></div>
+                <div class="square white grid-item" data-id="button9" data-listener="false"></div>
         </div>
-    </div>
+
 
     <script src="assets/js/script.js"></script>
 </body>

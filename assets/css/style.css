@@ -12,6 +12,14 @@
     font-family: "Teko", 'Sans-Serif';
 }
 
+
+h3 {
+    padding-right: 50px;
+}
+
+.scorebox {
+    text-align: center;
+}
 /*----Colour----*/
 .playground {
     background-color: black;
@@ -45,16 +53,23 @@
 }
 
 /*----Game Area Structure*/
+
 .playground {
     padding-top: 10px;
+    text-align: center;
 }
 
-.row {
-text-align: center;
+.grid-container {
+    display: grid;
+    column-gap: 10px;
+    row-gap: 10px;
+    grid-template-columns: 105px 104px 115px;
+    padding: 10px;
+    align-content: center;
+    justify-content: center;
 }
 
 .square {
-display: inline-block;
 width: 100px;
 height: 100px;
 cursor: pointer;
@@ -63,24 +78,24 @@ margin-right: 2px;
 }
 
 .square:hover {
-    background-color: #423a3a;
     border: 1px solid black;
     box-sizing: border-box;
 }
 
 /*----Game Buttons*/
-form {
-    text-align: center;
+.button {
+    margin-bottom: 4px !important;
 }
-
-.start-btn,.enter-btn{
+.button, #instructionsButton {
     cursor: pointer;
-}
-.select-cells-level{
-    width: 70px;
+    display: block;
+    margin: auto;
 }
 
 #how-to-play{
     display: none;
 }
 
+.light {
+ opacity: 0.4;
+}

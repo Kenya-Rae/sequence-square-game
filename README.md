@@ -98,7 +98,8 @@ As the site owner I want:
 
 ## Bugs
 - When hovering over the squares within the grid, squares would move. I found that this could be caused due to the child elements not being "fixed" within the parent div. I used box-sizing: border-box to resolve my issue for now.
-- Was unable to get my how to play to hide once the instructions button was clicked again. I had used [W3schools](https://www.w3schools.com/howto/howto_js_toggle_hide_show.asp). to go through how to hide/element.
+- Cannot set properties of null (setting 'innerText') - showScore (script.js:31:46), newGame (script.js:19:3), HTMLButtonElement.onclick ((index):18:55). It seemed I had a typo when getting my element within the showTurns function.
+- Undefined data result when checking current game in dev tools. 
 
 ## Deployments
 This project was deployed to GitHub Pages using the steps below;
