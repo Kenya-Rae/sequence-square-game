@@ -3,78 +3,93 @@ const game = {
   score: 0, // Users Score
   currentGame: [], // Game Sequence
   usersMoves: [], // Users Sequence
-  buttons: [],  // In Game Buttons
-  eventHandlers: [] // Stores the Clicks so I can remove it later
+  buttons: [], // In Game Buttons
+  eventHandlers: [], // Stores the Clicks so I can remove it later
+  isDisplayingSequence: false, //control user input during sequence display
 };
+
+// Function to update the score display
+function updateScores() {
+  const scoreEl = document.getElementById("scores");
+  if (scoreEl) {
+    scoreEl.textContent = "Score: " + game.score;
+  } else {
+    console.error("Score element not found!");
+  }
+}
 
 // Listening for user input //
 document.addEventListener("DOMContentLoaded", () => {
-  userInputHandler();
-  newGame();
+  const startButton = document.getElementById("startButton");
+  startButton.addEventListener("click", startNewGame);
 });
 
 // Adding .light css class //
 function userClickHandler(event) {
-  const button = event.target;
-  button.classList.add("light");
-  setTimeout(function () {
-    button.classList.remove("light");
-  }, 300);
+  if (!game.isDisplayingSequence) {
+    const button = event.target;
+    button.classList.add("light");
+    setTimeout(function () {
+      button.classList.remove("light");
+    }, 300);
 
-  const dataId = button.dataset.id;
-  game.usersMoves.push(dataId);
-  console.log("Button", dataId);
+    const dataId = button.dataset.id;
+    game.usersMoves.push(dataId);
+    console.log("Button", dataId);
 
-  // Get the index of the current move in the sequence //
-  const currentMoveIndex = game.usersMoves.length - 1;
+    // Geting the index of the current move in the sequence //
+    const currentMoveIndex = game.usersMoves.length - 1;
 
-  // Comparing users move to the game sequence //
-  if (dataId === game.currentGame[currentMoveIndex]) {
-    console.log("A Match!");
-    // Checking if the user has completed the sequence //
-    if (game.usersMoves.length === game.currentGame.length) {
-      console.log("Sequence Is Complete!");
-      game.score++; // incrementing score //
-      console.log("Score:", game.score);
+    // Comparing users move to the game sequence //
+    if (dataId === game.currentGame[currentMoveIndex]) {
+      console.log("A Match!");
+      // Checking if the user has completed the sequence //
+      if (game.usersMoves.length === game.currentGame.length) {
+        console.log("Sequence Is Complete!");
+        game.score++; // incrementing score //
+        console.log("Score:", game.score);
+        updateScores(); // updates display //
+
+        window.alert("Sequence Complete! Well Done!!");
+        // Resetting the moves for the next round //
+        game.usersMoves = [];
+        startNewGame(); // Start a new round immediately
+      }
+    } else {
+      console.log("Game Over");
+      window.alert("Ohh no, wrong button! Game over..");
+      removeEventClick(); // To remove the click event listeners when game is over //
+      game.score = 0; // resetting game users score //
+      console.log("Score reset:", game.score);
       updateScores(); // updates display //
 
-      window.alert("Sequence Complete! Well Done!!");
-      // Resetting the moves for the next round //
+      // Resetting the game state here //
       game.usersMoves = [];
-      startCombination();
-      flashLightsOn();
+      game.currentGame = [];
+      game.sequenceLength = 3; // Reset sequence length if needed
     }
-  } else {
-    console.log("Game Over");
-    window.alert("Ohh no, wrong button! Game over..");
-    removeEventClick(); // To remove the click when game is over //
-    game.score = 0; // resetting game users score //
-    console.log("Score reset:", game.score);
-    updateScores(); // updates display //
-
-    // Resetting the game state here //
-    game.usersMoves = [];
-    game.currentGame = [];
+    console.log(game.usersMoves);
   }
-  console.log(game.usersMoves);
 }
 
 // Adding Click Event Listener to Buttons //
 function userInputHandler() {
   game.buttons = document.querySelectorAll(".square");
   game.buttons.forEach((button) => {
-    const clickHandler = function(event) { userClickHandler(event); };
+    const clickHandler = function (event) {
+      userClickHandler(event);
+    };
     game.eventHandlers.push({ button, clickHandler });
     button.addEventListener("click", clickHandler);
   });
 }
 
-// Removing Click Event Listener//
+// Removing Click Event Listeners //
 function removeEventClick() {
   game.eventHandlers.forEach(({ button, clickHandler }) => {
     button.removeEventListener("click", clickHandler);
   });
-  game.eventHandlers = []; //Emptying this array of clicks//
+  game.eventHandlers = []; // Emptying this array of clicks //
 }
 
 // New game //
@@ -84,31 +99,34 @@ function startNewGame() {
   game.score = 0;
   console.log("Started New Game. Score reset:", game.score);
   updateScores();
+
+  // Remove existing event listeners
+  removeEventClick();
+
+  // Start a new sequence
   startCombination();
   flashLightsOn();
-}
 
-// Function to display real score //
-function updateScores() {
-  const scoreEl = document.getElementById("scores");
-  scoreEl.textContent = "Score: " + game.score;
+  // Disable user input during sequence display
+  game.isDisplayingSequence = true;
+  setTimeout(() => {
+    game.isDisplayingSequence = false;
+    userInputHandler(); // Enable user input after starting the game
+  }, game.currentGame.length * 1000);
 }
 
 // Pushing buttons to current game//
 function startCombination() {
+  game.currentGame = [];
   const buttons = document.querySelectorAll(".square");
   if (buttons) {
     buttons.forEach((button) => {
       game.currentGame.push(button.dataset.id);
     });
+    game.currentGame = game.currentGame.slice(0, game.sequenceLength); // Set sequence length
     game.currentGame.sort(() => Math.random() - 0.5);
   }
   console.log(game.currentGame);
-}
-
-// Show score - to increment? //
-function showScore() {
-  document.getElementById("scores").innerText = game.score;
 }
 
 // To actually flash the lights on //
@@ -121,18 +139,7 @@ function flashLightsOn() {
         setTimeout(() => {
           element.classList.remove("light");
         }, 300);
-      }, index * 600); // 600ms delay between each light flash
+      }, index * 1000);
     }
   });
-}
-
-// Start of a new game //
-function newGame() {
-  game.score = 0;
-  game.usersMoves = [];
-  game.currentGame = [];
-  game.buttons = [];
-  showScore();
-  startCombination();
-  flashLightsOn();
 }
