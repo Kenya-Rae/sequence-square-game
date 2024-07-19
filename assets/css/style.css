@@ -1,101 +1,108 @@
-@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 /*----Text,Titles-----*/
-#game-title{
-    font-family: "Teko", 'Sans-Serif';
-    text-align: center;
-    font-size: 50px;
-    text-decoration: underline;
+#game-title {
+  font-family: "Teko", "Sans-Serif";
+  text-align: center;
+  font-size: 50px;
+  text-decoration: underline;
 }
 
-#how-to-play>h2{
-    font-family: "Teko", 'Sans-Serif';
+#how-to-play > h2 {
+  font-family: "Teko", "Sans-Serif";
+  text-align: center;
 }
 
+.list-rules {
+  font-family: "Poppins", "Sans-Serif";
+  text-align: center;
+}
 
 h3 {
-    padding-right: 50px;
+  padding-right: 50px;
 }
 
 .scorebox {
-    text-align: center;
+  text-align: center;
 }
 /*----Colour----*/
 .playground {
-    background-color: black;
+  background-color: black;
 }
 .blue {
-    background-color: #345995;
+  background-color: #345995;
 }
 .cyan {
-    background-color: #a8f0f5;
+  background-color: #a8f0f5;
 }
 .yellow {
-    background-color: #EAC435;
+  background-color: #eac435;
 }
 .green {
-    background-color: #3F612D;
+  background-color: #3f612d;
 }
 .red {
-    background-color: #FB4D3D;
+  background-color: #fb4d3d;
 }
 .orange {
-    background-color: #F9A620;
+  background-color: #f9a620;
 }
 .purple {
-    background-color: #726DA8;
+  background-color: #726da8;
 }
 .pink {
-    background-color: #FF86C8;
-} 
+  background-color: #ff86c8;
+}
 .white {
-    background-color: #FBFEF9;
+  background-color: #fbfef9;
 }
 
 /*----Game Area Structure*/
 
 .playground {
-    padding-top: 10px;
-    text-align: center;
+  padding-top: 10px;
+  text-align: center;
 }
 
 .grid-container {
-    display: grid;
-    column-gap: 10px;
-    row-gap: 10px;
-    grid-template-columns: 105px 104px 115px;
-    padding: 10px;
-    align-content: center;
-    justify-content: center;
+  display: grid;
+  column-gap: 10px;
+  row-gap: 10px;
+  grid-template-columns: 105px 104px 115px;
+  padding: 10px;
+  align-content: center;
+  justify-content: center;
 }
 
 .square {
-width: 100px;
-height: 100px;
-cursor: pointer;
-margin-left: 2px;
-margin-right: 2px;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  margin-left: 2px;
+  margin-right: 2px;
 }
 
 .square:hover {
-    border: 1px solid black;
-    box-sizing: border-box;
+  border: 1px solid black;
+  box-sizing: border-box;
 }
 
 /*----Game Buttons*/
 .button {
-    margin-bottom: 4px !important;
+  margin-bottom: 4px !important;
 }
-.button, #instructionsButton {
-    cursor: pointer;
-    display: block;
-    margin: auto;
+.button,
+#instructionsButton {
+  cursor: pointer;
+  display: block;
+  margin: auto;
 }
 
-#how-to-play{
-    display: none;
+#how-to-play {
+  display: none;
 }
 
 .light {
- opacity: 0.4;
+  opacity: 0.4;
 }

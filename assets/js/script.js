@@ -1,3 +1,13 @@
+// Function to display intructions //
+function howTo() {
+  const howToPlay = document.getElementById("how-to-play");
+  if (howToPlay.style.display === "none") {
+    howToPlay.style.display = "block";
+  } else {
+    howToPlay.style.display = "none";
+  }
+}
+
 // The pure game state //
 const game = {
   score: 0, // Users Score
@@ -49,11 +59,17 @@ function userClickHandler(event) {
         game.score++; // incrementing score //
         console.log("Score:", game.score);
         updateScores(); // updates display //
-
         window.alert("Sequence Complete! Well Done!!");
         // Resetting the moves for the next round //
         game.usersMoves = [];
-        startNewGame(); // Start a new round immediately
+        addMove();
+        flashLightsOn();
+
+        // should disable users input during flash//
+        game.isDisplayingSequence = true;
+        setTimeout(() => {
+          game.isDisplayingSequence = false;
+        }, game.currentGame.length * 1000);
       }
     } else {
       console.log("Game Over");
@@ -66,7 +82,6 @@ function userClickHandler(event) {
       // Resetting the game state here //
       game.usersMoves = [];
       game.currentGame = [];
-      game.sequenceLength = 3; // Reset sequence length if needed
     }
     console.log(game.usersMoves);
   }
@@ -115,6 +130,14 @@ function startNewGame() {
   }, game.currentGame.length * 1000);
 }
 
+function addMove() {
+  const buttons = document.querySelectorAll(".square");
+  if (buttons.length > 0) {
+    const randomButton = buttons[Math.floor(Math.random() * buttons.length)];
+    game.currentGame.push(randomButton.dataset.id);
+  }
+  console.log(game.currentGame);
+}
 // Pushing buttons to current game//
 function startCombination() {
   game.currentGame = [];
