@@ -166,3 +166,22 @@ function flashLightsOn() {
     }
   });
 }
+
+// to send email //
+function sendEmail() {
+  // getting html form values//
+  let param = {
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    subject: document.getElementById("subject").value,
+    message: document.getElementById("message").value,
+  };
+  // using emailjs to send this email with values (parameters) and alert when done//
+  emailjs
+    .send("service_t8jb8bs", "template_bwta55d", param)
+    .then(
+      alert(
+        "Email has now been sent! Please wait 3-5 working days for a response."
+      )
+    );
+}

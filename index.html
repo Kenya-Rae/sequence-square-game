@@ -4,8 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="assets/css/style.css" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images//favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images//favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/730b9a0988.js" crossorigin="anonymous"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init({
+            publicKey: "0K5xPssRUC9IukuLi",
+        });
+    })();
+    </script>
 
     <title>Sequence Squares</title>
 </head>
@@ -23,10 +38,10 @@
     <div id="how-to-play">
         <h2> How to Play?</h2>
         <ol class="list-rules">
-            <ul>Press<em>"Start"</em>. </ul>
-            <ul>You will be shown a sequence that you will need to repeat.</ul>
-            <ul>The sequence will light up, once the sequence has finished, repeat the sequence in the same order.</luli>
-            <ul>If you are successful, you can continue playing until a wrong move is made.</ul>
+            <ul>- Press<em>"Start"</em>. </ul>
+            <ul>- You will be shown a sequence that you will need to repeat.</ul>
+            <ul>- The sequence will light up, once the sequence has finished, repeat the sequence in the same order.</luli>
+            <ul>- If you are successful, you can continue playing until a wrong move is made.</ul>
             <p> Note: The sequence will add one new button each success.</p>
             <p> Good Luck!! 😊</p>
         </ol>
@@ -42,12 +57,46 @@
                 <div class="square green grid-item" data-id="button4" data-listener="false"></div>
                 <div class="square red grid-item" data-id="button5" data-listener="false"></div>
                 <div class="square orange grid-item" data-id="button6" data-listener="false"></div>
-                <div class="square purple grid-item" data-id="button7" data-listener="false"></div>
-                <div class="square pink grid-item" data-id="button8" data-listener="false"></div>
-                <div class="square white grid-item" data-id="button9" data-listener="false"></div>
         </div>
 
+        <div class="form-container">
+        <form id="outer-form">
+            <h2 class="contact-title">Feedback</h2>
+            <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" required>
+        </div>
 
+        <div class="form-group">
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" required>
+        </div>
+
+        <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea name="message" id="message" rows="6" required></textarea>
+        </div>
+        <button type="submit"  id="send-btn" onclick="sendEmail()">Send Email</button>
+        </form>
+    </div>
+
+ <footer class="footer">
+    <ol id="socials" class="list-inline">
+      <ul class="list-inline-item">
+        <a href="https://kenya-rae.github.io/Kenya-s-Portfolio/" target="_blank"><i class="fa-solid fa-user-tie"
+            aria-hidden="true"></i><span>My Portfolio</span></a>
+        </ul>
+      <ul class="list-inline-item">
+        <a href="https://www.github.com" target="_blank"><i class="fa-brands fa-github"
+            aria-hidden="true"></i><span>GitHub</span></a>
+        </ul>
+    </ol>
+ </footer>
     <script src="assets/js/script.js"></script>
 </body>
 </html>

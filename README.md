@@ -1,4 +1,4 @@
-![]()
+![Sequence Squares Logo](/favicon.ico)
 <h1 allign="center" id="title"> Sequence Squares </h1>
 
 
@@ -35,10 +35,12 @@
 
 #### Recruiters Goals
 
-The main audience for this site 4+.
+The main audience for this site 6+.
 
 #### User Goals:
 - To sucessfully complete the game.
+- Enjoy the game.
+- Challenege memory.
 
 #### Developers goals:
 - Create a simple and interactive game.
@@ -61,25 +63,27 @@ As the site owner I want:
 
 
 ## Design Choices
-
-
+- 6 Buttons game 
+- Colours to make page 
 ### Languages Used 
 
 - HTML
 - CSS
 - JavaScript (Jquery)
 ### Fonts
-
+- Google Fonts: Teko and Poppins 
 
 
 ### Icons 
-
+- Font Awesome for footer items
+- Favicon for my web icon, where created an the icon of four squares. 
 
 ### Colours
-
+- Bright colours to make it fun.
 
 
 ### Images
+- Favicon Icon image can be found []()
 
 ### Video Files
 
@@ -99,7 +103,12 @@ As the site owner I want:
 ## Bugs
 - When hovering over the squares within the grid, squares would move. I found that this could be caused due to the child elements not being "fixed" within the parent div. I used box-sizing: border-box to resolve my issue for now.
 - Cannot set properties of null (setting 'innerText') - showScore (script.js:31:46), newGame (script.js:19:3), HTMLButtonElement.onclick ((index):18:55). It seemed I had a typo when getting my element within the showTurns function.
-- Undefined data result when checking current game in dev tools. 
+- Undefined data result when checking current game in dev tools. Checked data attributes and changed them.
+- Sequence started immediately on page load, due to sequence function being called at the very start.
+- Sequence didn't increase, it used all 9 buttons within one sequence, calling them one after another. However, It wouldn't increment. This was because I hadnt called the sequnence and combined it with "++".
+- New game would be called everytime, even when user was successful in copying sequence. I had mixed up a lot of the game logic. I had to restructer and go through the copy and remove some called functions.
+- EmailJS function work when email has been sent. Though the test email is not sending over. Could this be due to the undeployment of the site?
+
 
 ## Deployments
 This project was deployed to GitHub Pages using the steps below;
@@ -132,15 +141,18 @@ To clone this project to Gitpod use the following steps;
 
 ### Frameworks, Libraries and Programs Used
 - [coolors](https://coolors.co/a8d5e2-f9a620-ffd449-548c2f-104911) For the colour of the squares.
-
+- [Font Awesome](https://fontawesome.com/) - For Icons in the footer
+- [W3schools](https://www.w3schools.com) - Refresh my mind on some basic JavaScript concepts.
+- [Bro Code JS Course](https://www.youtube.com/watch?v=lfmg-EJ8gm4&t=32962s)
 ### Media
 
 
 
 ### Code
-- 
+- [CSS Buttons](https://www.w3schools.com/css/css3_buttons.asp)- For shawdowing properties.
+- [Toggle Hiding and Showing](https://www.w3schools.com/howto/howto_js_toggle_hide_show.asp) - How to get my toggle to work on the instructions.
 
 ### Acknowledgments
-
+- 
 
 [Back to top](#title)
