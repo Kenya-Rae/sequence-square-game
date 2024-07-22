@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 /*----Text,Titles-----*/
 #game-title {
   font-family: "Teko", "Sans-Serif";
@@ -40,7 +41,7 @@
     padding-left: 0px;
 }
 .list-inline, span {
-  font-family: "Monserrat", "Sans-Serif";
+  font-family: "Poppins", "Sans-Serif";
   text-align: center;
   padding-right: 10px;
   font-size: 16;
@@ -70,7 +71,7 @@ h3 {
  background-color: #db324d;
 }
 
-/*-----Footer Text -----*/
+/*-------Footer Text-----*/
 i {
   padding-left: 10px;
   font-size: 20px;
@@ -79,7 +80,7 @@ i {
 span {
   padding-left: 10px;
 }
-/*----Colour----*/
+/*------Colour------*/
 body {
   background-color: black;
 }
@@ -109,7 +110,7 @@ a {
   background-color: #f9a620;
 }
 
-/*----Game Area Structure*/
+/*------Game Area Structure------*/
 
 .playground {
   padding-top: 10px;
@@ -143,7 +144,7 @@ a {
   box-sizing: border-box;
 }
 
-/*----Game Buttons*/
+/*-------Game Buttons-------*/
 .button {
   margin-bottom: 4px !important;
   background-color: #f5cb5c;
@@ -184,7 +185,7 @@ button#instructionsButton {
   opacity: 0.2;
 }
 
-/* Contact Form */
+/*-------Contact Form------- */
 .form-container {
   display: ruby-text;
   padding-top: 15px;
@@ -231,3 +232,33 @@ label {
 #send-btn:hover {
   background-color: #afa386;
 }
+
+/*--------Media Queries------ */
+
+/*--Small devices ( less than 576px)--*/
+@media (max-width: 576px) { 
+  body{
+    margin-right: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+  }
+
+  .playground{
+    width: 320px;
+  }
+
+  .square{
+    width: 90px;
+    height: 90px;
+  }
+}
+
+/*--Medium devices (tablets, 768px and up)--*/
+@media (min-width: 768px) { ... }
+
+/*--Large devices (desktops, 992px and up)--*/
+@media (min-width: 992px) { ... }
+
+/*--Extra large devices (large desktops, 1200px and up)--*/
+@media (min-width: 1200px) { ... }
