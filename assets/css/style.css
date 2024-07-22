@@ -9,6 +9,7 @@
   text-decoration: underline;
   color: white;
   background-color: #db324d;
+  margin-top: 0px;
 }
 
 #how-to-play > h2 {
@@ -44,7 +45,7 @@
   font-family: "Poppins", "Sans-Serif";
   text-align: center;
   padding-right: 10px;
-  font-size: 16;
+  font-size: 16px;
 }
 
 h3 {
@@ -73,6 +74,7 @@ h3 {
 
 /*-------Footer Text-----*/
 i {
+  padding-top: 10px;
   padding-left: 10px;
   font-size: 20px;
 }
@@ -253,12 +255,3 @@ label {
     height: 90px;
   }
 }
-
-/*--Medium devices (tablets, 768px and up)--*/
-@media (min-width: 768px) { ... }
-
-/*--Large devices (desktops, 992px and up)--*/
-@media (min-width: 992px) { ... }
-
-/*--Extra large devices (large desktops, 1200px and up)--*/
-@media (min-width: 1200px) { ... }

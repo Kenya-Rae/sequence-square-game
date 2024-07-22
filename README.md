@@ -125,7 +125,7 @@ The instruction button when clicked, displays that instructions on how to play t
 
 ### Game in Progress:
 When you press start, the sequence will display. Each square will flash a light one at a time. You will have to repeat the sequence once the computer has finished displaying their sequence.
-![Game in progress](assets/video/sequence-squares-game.mp4)
+<video controls src="assets/video/sequence-squares-game.mp4" title="Game in progress"></video>
 
 ### Correct Sequence Alert:
 If you match the sequence correctly an alert will display before the next round.
@@ -186,14 +186,13 @@ To clone this project to Gitpod use the following steps;
 - [GitHub](https://github.com/). To store my repository and deploy site.
 - [Gitpod](https://www.gitpod.io/). Used to write code for this project.
 - [coolors](https://coolors.co/a8d5e2-f9a620-ffd449-548c2f-104911). Used to find colours for the website.
-- [Font Awesome](https://fontawesome.com/) - For Icons in the footer 
-- [EmailJS](https://www.emailjs.com/)- Used to create email service for my feedback form.
-- [Am I responsive](https://ui.dev/amiresponsive) - To show my website in different browsers for responsive design.
-- [Favicon]() - For web icon.
+- [Font Awesome](https://fontawesome.com/). For Icons in the footer 
+- [EmailJS](https://www.emailjs.com/). Used to create email service for my feedback form.
+- [Am I responsive](https://ui.dev/amiresponsive). To show my website in different browsers for responsive design.
+- [Favicon](https://favicon.io/). To make and generate my website icon 
 - [HTML Validation]()
 - [CSS Validation]()
 ### Media
-
 
 
 ### Code
@@ -202,8 +201,8 @@ To clone this project to Gitpod use the following steps;
 - [Bootstrap Media Queries](https://getbootstrap.com/docs/4.1/layout/overview/) - Used their basic media query for my project and put my own css styling.
 
 ### Acknowledgments
-- [Martina Terlevic]() - Supported me through the project, listened and allowed me talk about my concerns and thoughts about JavaScript. Giving advice not just for my projects but in life to.
-- [Zahria](https://www.linkedin.com/in/ioan-zaharia/)- For allowing me to go through my concerns with JavaScript. Aiding my thinking when writing and debugging code. Showed me how to use the prettier extention on GitPod, due to my horrible indentations.
+- [Martina Terlevic](https://github.com/SephTheOverwitch) - Supported me through the project, listened and allowed me talk about my concerns and thoughts about JavaScript. Giving advice not just for my projects but in life to.
+- [Zahria](https://github.com/zioan)- For allowing me to go through my concerns with JavaScript. Aiding my thinking when writing and debugging code. Showed me how to use the prettier extention on GitPod, due to my horrible indentations.
 - [Bro Code JS Course](https://www.youtube.com/watch?v=lfmg-EJ8gm4&t=32962s) As I wasnt understanding the concepts well, I discovered this video that explain clear enough for me to understand JS concepts.
 - [W3schools](https://www.w3schools.com) - Used as a refresher.
 - Friend and family who helped test and supported me through the emotions of this project. As this proved to be a challenge.
