@@ -130,7 +130,12 @@ The instruction button when clicked, displays that instructions on how to play t
 
 ### Game in Progress:
 When you press start, the sequence will display. Each square will flash a light one at a time. You will have to repeat the sequence once the computer has finished displaying their sequence.
-<video controls src="assets/video/sequence-squares-game.mp4" title="Game in progress"></video>
+
+![Game in Progress?](assets/video/sequence-squares-game.mp4)
+
+
+https://github.com/user-attachments/assets/ef96fd9d-1452-48a8-928d-68f2ae11a51f
+
 
 ### Correct Sequence Alert:
 If you match the sequence correctly an alert will display before the next round.
