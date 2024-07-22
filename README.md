@@ -1,10 +1,11 @@
 ![Sequence Squares Logo](/favicon.ico)
 <h1 allign="center" id="title"> Sequence Squares </h1>
 
+![Sequence Squares](assets/images/Responsive%20IMG.png)
 
-[Live Project can be viewed here.]()
+[Live Project can be viewed here.](https://kenya-rae.github.io/sequence-square-game/)
 
-
+Sequence Squares is a online memory game that will puut your memory to the test. Give yourself a challenge in remembering the sequence.
 
 ## Table of Contents
 
@@ -64,7 +65,7 @@ As the site owner I want:
 
 
 ## Design Choices
-The design choices were decided over the development of this project. The wireframe [Wireframes](#wireframes) were a starting point. As development went on, the structure and game changed as well.
+The design choices were decided over the development of this project. The [Wireframes](#wireframes) were a starting point. As development went on, the structure and game changed as well.
 
 ### Languages Used 
 
@@ -93,8 +94,9 @@ The design choices were decided over the development of this project. The wirefr
 
 
 ### Wireframes
-- Wireframes was created using [Balsamiq](https://balsamiq.com/).
-- Wireframes can be found [wireframes](assets/images/wireframes/).
+- Wireframes was created using [Balsamiq](https://balsamiq.com/). The overall site has changed over development. This was due to the complexity it may have when building. As this is my first time working with JavaScript. I wanted to make something very simple and basic, due to where my skill set currently is.
+- Wireframes can be found [here](assets/images/wireframes/).
+
 ## Features
 - Functional footer which provides link to GitHub and my portfolio.
 - Instructions collapse area, is functional and able to see how to play the game.
@@ -102,6 +104,36 @@ The design choices were decided over the development of this project. The wirefr
 - Responsive for all screen sizes.
 - Easy navigation and simiple to interact with.
 - Identifiable buttons.
+- Feedback form that allows emails to be sent in order to recieve feedback from users.
+
+### Loaded page: 
+When you first load on the page you are meet with a "Start" and "Instructions" button.
+
+![User Interface](assets/images/start-game-ux.png)
+
+### Feedback Form:
+A simple feedback form at the bottom of the page. Allowing users to provide feedback in what they would prefer, what they liked and disliked etc.
+![Feedback Form](assets/images/feedback-form.png)
+
+When you have successfully sent your email over, an alert will display to show that this has been sent.
+![Feedback Sent](assets/images/feedback-sent.png)
+
+### How to Play:
+The instruction button when clicked, displays that instructions on how to play the game.
+
+![How to Play?](assets/images/how-to-play.png)
+
+### Game in Progress:
+When you press start, the sequence will display. Each square will flash a light one at a time. You will have to repeat the sequence once the computer has finished displaying their sequence.
+![Game in progress](assets/video/sequence-squares-game.mp4)
+
+### Correct Sequence Alert:
+If you match the sequence correctly an alert will display before the next round.
+![Correct Sequence Alert](assets/images/user-successful.png)
+
+### Game over Alert:
+The game over alert will display when you incorrectly select the wrong button.
+![Game Over](assets/images/game-over.png)
 
 ### Accessibility
 - Ensured that the flashlight up styling had to be transparent to ensure the everyone can see the sequence being flashed.
@@ -112,11 +144,12 @@ The design choices were decided over the development of this project. The wirefr
 ## Bugs
 - When hovering over the squares within the grid, squares would move. I found that this could be caused due to the child elements not being "fixed" within the parent div. I used box-sizing: border-box to resolve my issue for now.
 - Cannot set properties of null (setting 'innerText') - showScore (script.js:31:46), newGame (script.js:19:3), HTMLButtonElement.onclick ((index):18:55). It seemed I had a typo when getting my element within the showTurns function.
-- Undefined data result when checking current game in dev tools. Checked data attributes and changed them.
-- Sequence started immediately on page load, due to sequence function being called at the very start.
+- Undefined data result when checking current game in dev tools. Checked data attributes within my html div square classes and changed them to data-id, this allowed me to pull the correct data within the script.js file.
+- Sequence started immediately on page load, due to sequence function being called at the very start. I had removed this function from the pure game start.
 - Sequence didn't increase, it used all 9 buttons within one sequence, calling them one after another. However, It wouldn't increment. This was because I hadnt called the sequnence and combined it with "++".
 - New game would be called everytime, even when user was successful in copying sequence. I had mixed up a lot of the game logic. I had to restructer and go through the copy and remove some called functions.
 - EmailJS function work when email has been sent. Though the test email is not sending over. Could this be due to the undeployment of the site?
+- (Not much of a bug)The original 9 buttons had been reduced to 6. As I wasnt sure how to increase difficulty once a user was successful due to how I incremeneted the sequence. I had removed 3 buttons and tried this game with 6 buttons and it naturally increases the difficulty.
 
 
 ## Deployments
@@ -166,13 +199,13 @@ To clone this project to Gitpod use the following steps;
 ### Code
 - [CSS Buttons](https://www.w3schools.com/css/css3_buttons.asp)- For shawdowing properties.
 - [Toggle Hiding and Showing](https://www.w3schools.com/howto/howto_js_toggle_hide_show.asp) - How to get my toggle to work on the instructions.
--[Bootstrap Media Queries](https://getbootstrap.com/docs/4.1/layout/overview/) - Used their basic media query for my project and put my own css styling.
+- [Bootstrap Media Queries](https://getbootstrap.com/docs/4.1/layout/overview/) - Used their basic media query for my project and put my own css styling.
 
 ### Acknowledgments
 - [Martina Terlevic]() - Supported me through the project, listened and allowed me talk about my concerns and thoughts about JavaScript. Giving advice not just for my projects but in life to.
-- [IoanZahria]() - For allowing me to go through my concerns with JavaScript. Aiding my thinking when writing and debugging code. Showed me how to use the prettier extention on GitPod, due to my horrible indentations.
+- [Zahria](https://www.linkedin.com/in/ioan-zaharia/)- For allowing me to go through my concerns with JavaScript. Aiding my thinking when writing and debugging code. Showed me how to use the prettier extention on GitPod, due to my horrible indentations.
 - [Bro Code JS Course](https://www.youtube.com/watch?v=lfmg-EJ8gm4&t=32962s) As I wasnt understanding the concepts well, I discovered this video that explain clear enough for me to understand JS concepts.
-- - [W3schools](https://www.w3schools.com) - Refresh my mind on some
+- [W3schools](https://www.w3schools.com) - Used as a refresher.
 - Friend and family who helped test and supported me through the emotions of this project. As this proved to be a challenge.
 
 [Back to top](#title)
