@@ -1,9 +1,9 @@
-![Sequence Squares Logo](/favicon.ico)
 <h1 allign="center" id="title"> Sequence Squares </h1>
 
 ![Sequence Squares](assets/images/Responsive%20IMG.png)
 
 [Live Project can be viewed here.](https://kenya-rae.github.io/sequence-square-game/)
+![Sequence Squares Logo](/favicon.ico)
 
 Sequence Squares is a online memory game that will puut your memory to the test. Give yourself a challenge in remembering the sequence.
 
@@ -11,23 +11,28 @@ Sequence Squares is a online memory game that will puut your memory to the test.
 
 ### User Experience (UX)
 
-- Project Goals
-- User Goals
-- Developer Goals
-- User Stories
-- Design Choices
-- Wireframes
+- [Project Goals](#project-goals)
+- [User Goals](#user-experience-ux)
+- [Developer Goals](#developers-goals)
+- [User Stories](#user-stories)
+- [Design Choices](#design-choices)
+- [Wireframes](#wireframes)
 
 ### Features
+- [Loaded page](#loaded-page)
+- [Feedback Form](#feedback-form)
+- [How to Play ](#how-to-deploy-to-github-pages)
+- [Game in Progress](#game-in-progress)
+- [Correct Sequence Alert](#correct-sequence-alert)
+- [Game Over Alert](#game-over-alert)
 ### Testing
-- Bugs
+- [Bugs](#bugs)
 ### Deployment
 ### Credits
 
-- Content
-- Media
-- Code
-- Acknowledgments
+- [Credits](#credits)
+- [Code](#code)
+- [Acknowledgments](#acknowledgments)
 
 ## User Experience (UX)
 
@@ -90,7 +95,7 @@ The design choices were decided over the development of this project. The [Wiref
 - Favicon Icon image can be found [Favicon](favicon.ico)
 
 ### Video Files
-
+ - Link to video, used to show features [Sequence Square Game Video](assets/video/sequence-squares-game.mp4).
 
 
 ### Wireframes
@@ -113,7 +118,7 @@ When you first load on the page you are meet with a "Start" and "Instructions" b
 
 ### Feedback Form:
 A simple feedback form at the bottom of the page. Allowing users to provide feedback in what they would prefer, what they liked and disliked etc.
-![Feedback Form](assets/images/feedback-form.png)
+<br>![Feedback Form](assets/images/feedback-form.png)
 
 When you have successfully sent your email over, an alert will display to show that this has been sent.
 ![Feedback Sent](assets/images/feedback-sent.png)
@@ -140,6 +145,13 @@ The game over alert will display when you incorrectly select the wrong button.
 - Used colours that would interfer or clash with eachother, easy on the eye. 
 
 ## Testing
+For this project I have had friends and family ranging from 7-56 years old, test amongst of various devices. Such as;
+-
+-
+-
+-
+-
+
 
 ## Bugs
 - When hovering over the squares within the grid, squares would move. I found that this could be caused due to the child elements not being "fixed" within the parent div. I used box-sizing: border-box to resolve my issue for now.
@@ -189,11 +201,9 @@ To clone this project to Gitpod use the following steps;
 - [Font Awesome](https://fontawesome.com/). For Icons in the footer 
 - [EmailJS](https://www.emailjs.com/). Used to create email service for my feedback form.
 - [Am I responsive](https://ui.dev/amiresponsive). To show my website in different browsers for responsive design.
-- [Favicon](https://favicon.io/). To make and generate my website icon 
+- [Favicon](https://favicon.io/). To make and generate my website icon.
 - [HTML Validation]()
 - [CSS Validation]()
-### Media
-
 
 ### Code
 - [CSS Buttons](https://www.w3schools.com/css/css3_buttons.asp)- For shawdowing properties.
