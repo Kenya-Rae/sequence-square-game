@@ -18,9 +18,11 @@ const game = {
   isDisplayingSequence: false, //control user input during sequence display
 };
 
+const startButton = document.getElementById("startButton");
+const scoreEl = document.getElementById("scores");
+
 // Function to update the score display
 function updateScores() {
-  const scoreEl = document.getElementById("scores");
   if (scoreEl) {
     scoreEl.textContent = "Score: " + game.score;
   } else {
@@ -30,8 +32,8 @@ function updateScores() {
 
 // Listening for user input //
 document.addEventListener("DOMContentLoaded", () => {
-  const startButton = document.getElementById("startButton");
   startButton.addEventListener("click", startNewGame);
+  document.getElementsByClassName("disable").classList.remove("disable");
 });
 
 // Adding .light css class //

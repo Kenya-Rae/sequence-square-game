@@ -150,7 +150,7 @@ The game over alert will display when you incorrectly select the wrong button.
 ## Future Feautres
 - I plan to have a ending level to cap the game once a certain level has been reached. In result, I would like to incorperate a winning celeberation on the screen for the successful users.
 - Furthermore I would also like to add sound to the game, whether that is with the game buttons or putting an radio/api that alsos the user to play the game as well as listen to their favourite songs.
-
+- As well as this I would like to make the game visibly inactive if the game has not been started or provide a start menu that will take you to the game. 
 ## Accessibility
 - Ensured that the flashlight up styling had to be transparent to ensure the everyone can see the sequence being flashed.
 - Used colours that would interfer or clash with eachother, easy on the eye. 
@@ -172,7 +172,7 @@ The game over alert will display when you incorrectly select the wrong button.
 - Sequence started immediately on page load, due to sequence function being called at the very start. I had removed this function from the pure game start.
 - Sequence didn't increase, it used all 9 buttons within one sequence, calling them one after another. However, It wouldn't increment. This was because I hadnt called the sequnence and combined it with "++".
 - New game would be called everytime, even when user was successful in copying sequence. I had mixed up a lot of the game logic. I had to restructer and go through the copy and remove some called functions.
-- EmailJS function work when email has been sent. Though the test email is not sending over. Could this be due to the undeployment of the site?
+- EmailJS function work when email has been sent. Though the test email is not sending over. I beleive this is due to a limit cap.
 - (Not much of a bug)The original 9 buttons had been reduced to 6. As I wasnt sure how to increase difficulty once a user was successful due to how I incremeneted the sequence. I had removed 3 buttons and tried this game with 6 buttons and it naturally increases the difficulty.
 
 
