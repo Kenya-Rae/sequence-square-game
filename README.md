@@ -1,11 +1,11 @@
 <h1 allign="center" id="title"> Sequence Squares </h1>
 
-![Sequence Squares](assets/images/Responsive%20IMG.png)
+![Sequence Squares](assets/images/responsive.png)
 
 [Live Project can be viewed here.](https://kenya-rae.github.io/sequence-square-game/)
-![Sequence Squares Logo](/favicon.ico)
+![Sequence Squares Logo](assets/images/favicon/favicon.ico)
 
-Sequence Squares is a online memory game that will puut your memory to the test. Give yourself a challenge in remembering the sequence.
+Sequence Squares is a online memory game that will puut your memory to the test. Give yourself a challenge in remembering the sequence. How long can you remember sequences for?
 
 ## Table of Contents
 
@@ -25,9 +25,11 @@ Sequence Squares is a online memory game that will puut your memory to the test.
 - [Game in Progress](#game-in-progress)
 - [Correct Sequence Alert](#correct-sequence-alert)
 - [Game Over Alert](#game-over-alert)
+- [Future Features](#future-feautres)
 ### Testing
 - [Bugs](#bugs)
 ### Deployment
+- [How to Deploy Site](#deployments)
 ### Credits
 
 - [Credits](#credits)
@@ -92,7 +94,7 @@ The design choices were decided over the development of this project. The [Wiref
 - The colours of this project were all randomised via [Coolors](https://coolors.co/a8d5e2-f9a620-ffd449-548c2f-104911) and then selected by myself. 
 
 ### Images
-- Favicon Icon image can be found [Favicon](favicon.ico)
+- Favicon Icon images can be found [Favicon](assets/images/favicon/)
 
 ### Video Files
  - Link to video, used to show features [Sequence Square Game Video](assets/video/sequence-squares-game.mp4).
@@ -121,7 +123,7 @@ A simple feedback form at the bottom of the page. Allowing users to provide feed
 <br>![Feedback Form](assets/images/feedback-form.png)
 
 When you have successfully sent your email over, an alert will display to show that this has been sent.
-![Feedback Sent](assets/images/feedback-sent.png)
+<br>![Feedback Sent](assets/images/feedback-sent.png)
 
 ### How to Play:
 The instruction button when clicked, displays that instructions on how to play the game.
@@ -139,18 +141,23 @@ https://github.com/user-attachments/assets/ef96fd9d-1452-48a8-928d-68f2ae11a51f
 
 ### Correct Sequence Alert:
 If you match the sequence correctly an alert will display before the next round.
-![Correct Sequence Alert](assets/images/user-successful.png)
+<br>![Correct Sequence Alert](assets/images/user-successful.png)
 
 ### Game over Alert:
 The game over alert will display when you incorrectly select the wrong button.
-![Game Over](assets/images/game-over.png)
+<br>![Game Over](assets/images/game-over.png)
 
-### Accessibility
+## Future Feautres
+- I plan to have a ending level to cap the game once a certain level has been reached. In result, I would like to incorperate a winning celeberation on the screen for the successful users.
+- Furthermore I would also like to add sound to the game, whether that is with the game buttons or putting an radio/api that alsos the user to play the game as well as listen to their favourite songs.
+
+## Accessibility
 - Ensured that the flashlight up styling had to be transparent to ensure the everyone can see the sequence being flashed.
 - Used colours that would interfer or clash with eachother, easy on the eye. 
 
 ## Testing
-For this project I have had friends and family ranging from 7-56 years old, test amongst of various devices. Such as;
+
+### For this project I have had friends and family ranging from 7-56 years old, test amongst of various devices. Such as;
 -
 -
 -
