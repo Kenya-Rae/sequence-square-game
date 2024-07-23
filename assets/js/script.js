@@ -45,19 +45,15 @@ function userClickHandler(event) {
 
     const dataId = button.dataset.id;
     game.usersMoves.push(dataId);
-    console.log("Button", dataId);
 
     // Geting the index of the current move in the sequence //
     const currentMoveIndex = game.usersMoves.length - 1;
 
     // Comparing users move to the game sequence //
     if (dataId === game.currentGame[currentMoveIndex]) {
-      console.log("A Match!");
       // Checking if the user has completed the sequence //
       if (game.usersMoves.length === game.currentGame.length) {
-        console.log("Sequence Is Complete!");
         game.score++; // incrementing score //
-        console.log("Score:", game.score);
         updateScores(); // updates display //
         window.alert("Sequence Complete! Well Done!!");
         // Resetting the moves for the next round //
@@ -72,18 +68,15 @@ function userClickHandler(event) {
         }, game.currentGame.length * 1000);
       }
     } else {
-      console.log("Game Over");
       window.alert("Ohh no, wrong button! Game over..");
       removeEventClick(); // To remove the click event listeners when game is over //
       game.score = 0; // resetting game users score //
-      console.log("Score reset:", game.score);
       updateScores(); // updates display //
 
       // Resetting the game state here //
       game.usersMoves = [];
       game.currentGame = [];
     }
-    console.log(game.usersMoves);
   }
 }
 
@@ -112,7 +105,6 @@ function startNewGame() {
   game.currentGame = [];
   game.usersMoves = [];
   game.score = 0;
-  console.log("Started New Game. Score reset:", game.score);
   updateScores();
 
   // Remove existing event listeners
