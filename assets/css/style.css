@@ -30,12 +30,14 @@
 * {
   padding-left: 0;
 }
+
 #socials {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
   justify-content: center;
+  list-style-type: none;
 }
 
 .list-inline-item {
@@ -267,6 +269,16 @@ label {
 @media (min-width: 576px) {
   .grid-container {
     width: 400px;
+    grid-template-columns: 80px 78px 80px;
+  }
+
+  .playground {
+    width: 280px;
+  }
+
+  .square {
+    width: 70px;
+    height: 70px;
   }
 }
 
