@@ -40,48 +40,63 @@ document.addEventListener("DOMContentLoaded", () => {
 function userClickHandler(event) {
   if (!game.isDisplayingSequence) {
     const button = event.target;
-    button.classList.add("light");
-    setTimeout(function () {
-      button.classList.remove("light");
-    }, 300);
+    buttonLight(button);
 
     const dataId = button.dataset.id;
     game.usersMoves.push(dataId);
 
-    // Geting the index of the current move in the sequence //
-    const currentMoveIndex = game.usersMoves.length - 1;
-
-    // Comparing users move to the game sequence //
-    if (dataId === game.currentGame[currentMoveIndex]) {
-      // Checking if the user has completed the sequence //
-      if (game.usersMoves.length === game.currentGame.length) {
-        game.score++; // incrementing score //
-        updateScores(); // updates display //
-        window.alert("Sequence Complete! Well Done!!");
-        // Resetting the moves for the next round //
-        game.usersMoves = [];
-        addMove();
-        flashLightsOn();
-
-        // should disable users input during flash//
-        game.isDisplayingSequence = true;
-        setTimeout(() => {
-          game.isDisplayingSequence = false;
-        }, game.currentGame.length * 1000);
+    if (checkUserCorrect(dataId)) {
+      if (sequenceComplete()) {
+        userSuccessful();
       }
     } else {
-      window.alert("Ohh no, wrong button! Game over..");
-      removeEventClick(); // To remove the click event listeners when game is over //
-      game.score = 0; // resetting game users score //
-      updateScores(); // updates display //
-
-      // Resetting the game state here //
-      game.usersMoves = [];
-      game.currentGame = [];
+      gameOver();
     }
   }
 }
 
+function buttonLight(button) {
+  button.classList.add("light");
+  setTimeout(function () {
+    button.classList.remove("light");
+  }, 300);
+}
+
+function checkUserCorrect(dataId) {
+  // Geting the index of the current move in the sequence //
+  const currentMoveIndex = game.usersMoves.length - 1;
+  return dataId === game.currentGame[currentMoveIndex];
+}
+
+function sequenceComplete() {
+  return game.usersMoves.length === game.currentGame.length;
+}
+
+function userSuccessful() {
+  game.score++; // incrementing score //
+  updateScores(); // updates display //
+  window.alert("Sequence Complete! Well Done!!");
+  // Resetting the moves for the next round //
+  game.usersMoves = [];
+  addMove();
+  flashLightsOn();
+
+  // should disable users input during flash//
+  game.isDisplayingSequence = true;
+  setTimeout(() => {
+    game.isDisplayingSequence = false;
+  }, game.currentGame.length * 1000);
+}
+function gameOver() {
+  window.alert("Ohh no, wrong button! Game over..");
+  removeEventClick(); // To remove the click event listeners when game is over //
+  game.score = 0; // resetting game users score //
+  updateScores(); // updates display //
+
+  // Resetting the game state here //
+  game.usersMoves = [];
+  game.currentGame = [];
+}
 // Adding Click Event Listener to Buttons //
 function userInputHandler() {
   game.buttons = document.querySelectorAll(".square");
