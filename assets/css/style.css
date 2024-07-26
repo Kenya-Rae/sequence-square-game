@@ -270,6 +270,14 @@ label {
 
 /*--------Media Queries------ */
 /*-- Extra Small devices (portrait phones, 576px and less--*/
+@media only screen and (max-width: 375px) {
+  #slogan {
+    font-size: 30px;
+    margin-top: 0px;
+    top: 0px;
+  }
+}
+
 @media (max-width: 575.98px) {
   .playground {
     width: 280px;
