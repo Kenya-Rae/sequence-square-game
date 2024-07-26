@@ -14,13 +14,30 @@
 }
 
 #slogan {
-  text-align: center;
-  font-size: 50px;
-  margin-top: 0px;
+  margin-top: 10px;
   margin-bottom: 10px;
   position: relative;
   bottom: 25px;
-  color: white;
+}
+
+.glow {
+  font-size: 50px;
+  color: #fff;
+  text-align: center;
+
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #d8d903,
+      0 0 40px #d8d903, 0 0 50px #d8d903, 0 0 60px #d8d903, 0 0 70px #d8d903;
+  }
+
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #f6f658, 0 0 40px #f6f658,
+      0 0 50px #f6f658, 0 0 60px #f6f658, 0 0 70px #f6f658, 0 0 80px #f6f658;
+  }
 }
 
 #how-to-play > h2 {
