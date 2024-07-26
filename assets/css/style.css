@@ -10,6 +10,17 @@
   color: white;
   background-color: #db324d;
   margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+#slogan {
+  text-align: center;
+  font-size: 50px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  position: relative;
+  bottom: 25px;
+  color: white;
 }
 
 #how-to-play > h2 {
@@ -73,7 +84,7 @@ h3 {
   bottom: 0;
   height: 50px;
   margin-top: 2px;
-  background-color: #db324d;
+  background-color: #db324eb2;
 }
 
 /*-------Footer Text-----*/
@@ -86,6 +97,7 @@ i {
 span {
   padding-left: 10px;
 }
+
 /*------Colour------*/
 body {
   background-color: black;
@@ -93,6 +105,7 @@ body {
 
 a {
   color: white;
+  font-weight: 700;
 }
 .playground {
   background-color: #373c3c;
@@ -171,7 +184,7 @@ button#instructionsButton {
   margin: auto;
   border-radius: 4px;
   border: none;
-  color: white;
+  color: black;
   border-radius: 15px;
   box-shadow: 0 9px #999;
   text-align: center;
