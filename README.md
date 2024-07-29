@@ -153,8 +153,6 @@ The instruction button when clicked, displays that instructions on how to play t
 
 When you press start, the sequence will display. Each square will flash a light one at a time. You will have to repeat the sequence once the computer has finished displaying their sequence.
 
-![Game in Progress?](assets/video/sequence-squares-game.mp4)
-
 https://github.com/user-attachments/assets/ef96fd9d-1452-48a8-928d-68f2ae11a51f
 
 ### Correct Sequence Alert:
@@ -182,6 +180,14 @@ The game over alert will display when you incorrectly select the wrong button.
 
 ## Testing
 
+### Manual Testing 
+| What to test | Expected Results | Passed |
+| -------- | ------- | ------- |
+| Start Button  |     |     |
+| Instructions Buttons |     |     |
+| game buttons   |   |     |
+
+
 ### For this project I have had friends and family ranging from 7-56 years old, test amongst of various devices. Such as;
 
 - Iphone 12 Pro - Safari, Portrait mode.
@@ -197,7 +203,9 @@ The game over alert will display when you incorrectly select the wrong button.
 - Samsung S12 - Samsung Internet, Portrait mode.
 - Iphone 13 - Safari, Portrait and Landscape Mode.
 
-After collating the data from my testers, the general concensious over Sequence Squares is that it is a good functional game. All buttons and functionalities worked correctly as they should. No mention of the flow of the page, however, some suggestions were similar to my future features. Suggestions such as a countdown timer for the start of each round, starting rounds with a fewer buttons and have a success rate that will then increase the difficultiy once the user has developed some confidence and be switched on in the game. As for the sucessful or game over alerts, it was suggested to have glowing text within the page itself that will signify if there is a next level, game over or game complete. Another tester had stated that this should be an app as this is something they would play as they travelled. Although, I had a feedback form below by habit my tested messaged me back instead. However, one test did infact use the feedback form and I had recieved the follow screenshot below, in which the tester expressed the same suggestions. They had also mentioned that yellow and orange square looked somewhat similar which had them a bit confused when it came to repeating the sequence. As well having this current code as a challenge mode and have easier mode with less buttons in the standard games.
+After collating the data from my testers, the general concensious over Sequence Squares is that it is a good functional game. All buttons and functionalities worked correctly as they should. No mention of the flow of the page, however, some suggestions were similar to my future features. Suggestions such as a countdown timer for the start of each round, starting rounds with a fewer buttons and have a success rate that will then increase the difficultiy once the user has developed some confidence and be switched on in the game. As for the sucessful or game over alerts, it was suggested to have glowing text within the page itself that will signify if there is a next level, game over or game complete. 
+
+Another tester had stated that this should be an app as this is something they would play as they travelled. Although, I had a feedback form below by habit my tested messaged me back instead. However, one test did infact use the feedback form and I had recieved the follow screenshot below, in which the tester expressed the same suggestions. They had also mentioned that yellow and orange square looked somewhat similar which had them a bit confused when it came to repeating the sequence. As well having this current code as a challenge mode and have easier mode with less buttons in the standard games.
 
 ![Feedback Email](assets/images/feedback.JPG)
 
@@ -242,6 +250,10 @@ There were nothing to report back or fix within my css as far as the validator i
 
 ## Bugs
 
+### Current Bugs
+
+
+### Fixed Bugs
 - When hovering over the squares within the grid, squares would move. I found that this could be caused due to the child elements not being "fixed" within the parent div. I used box-sizing: border-box to resolve my issue for now.
 - Cannot set properties of null (setting 'innerText') - showScore (script.js:31:46), newGame (script.js:19:3), HTMLButtonElement.onclick ((index):18:55). It seemed I had a typo when getting my element within the showTurns function.
 - Undefined data result when checking current game in dev tools. Checked data attributes within my html div square classes and changed them to data-id, this allowed me to pull the correct data within the script.js file.
