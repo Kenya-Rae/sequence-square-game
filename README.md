@@ -190,7 +190,7 @@ The game over alert will display when you incorrectly select the wrong button.
 - Iphone 15 - Safari, Portrait Mode.
 - Ipad
 - Ipad
-- Ipad - Safari, Portrait
+- Ipad 7th Gen - Safari, Portrait
 - HP Pavillion Gaming Laptop 17 - Chrome
 - Samsung S12 - Samsung Internet, Portrait mode.
 - Iphone 13 - Safari, Portrait and Landscape Mode.
@@ -216,6 +216,9 @@ I had few diagnostics within the lighthouse section that could be improved.
 ![Lighthouse Diagnostics](assets/images/lighthouse/lighthouse-diagnostics.png)
 <br>
 Overall I understand how to resolve a few of them. However currently, "Serve static assets with an efficent cache policy", "Avoid serving legacy JavaScript to modern browers" and "Eliminate render-blocking resources" are things im not to sure how to resolve. I have read in to these diagnostics and have tried to improve on things that was within my capacity. Such as the contrasting with the slogan "Square Up" it was previously a yellow glow, though changing to a red/pink has removed this issue.
+
+Once I made all the changes, I retested my site in Lighthouse. I had better results:
+![Lighthouse Overview - After changes](assets/images/lighthouse/lighthouse-overiew-after-change.png)
 
 ### Validators
 
