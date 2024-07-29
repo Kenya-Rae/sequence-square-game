@@ -182,11 +182,58 @@ The game over alert will display when you incorrectly select the wrong button.
 
 ### For this project I have had friends and family ranging from 7-56 years old, test amongst of various devices. Such as;
 
--
--
--
--
--
+- Iphone 12 Pro - Safari, Portrait mode.
+- Iphone 11 Pro - Safari, Portrait and Landscape mode.
+- Iphone 13 - Safari, Portrait and Landscape mode.
+- MacBook - Chrome.
+- Iphone XR - Safari, Portrait Mode.
+- Iphone 15 - Safari, Portrait Mode.
+- Ipad
+- Ipad
+- Ipad - Safari, Portrait
+- HP Pavillion Gaming Laptop 17 - Chrome
+- Samsung S12 - Samsung Internet, Portrait mode.
+- Iphone 13 - Safari, Portrait and Landscape Mode.
+
+After collating the data from my testers, the general concensious over Sequence Squares is that it is a good functional game. All buttons and functionalities worked correctly as they should. No mention of the flow of the page, however, some suggestions were similar to my future features. Suggestions such as a countdown timer for the start of each round, starting rounds with a fewer buttons and have a success rate that will then increase the difficultiy once the user has developed some confidence and be switched on in the game. As for the sucessful or game over alerts, it was suggested to have glowing text within the page itself that will signify if there is a next level, game over or game complete. Another tester had stated that this should be an app as this is something they would play as they travelled. Although, I had a feedback form below by habit my tested messaged me back instead. However, one test did infact use the feedback form and I had recieved the follow screenshot below, in which the tester expressed the same suggestions. They had also mentioned that yellow and orange square looked somewhat similar which had them a bit confused when it came to repeating the sequence. As well having this current code as a challenge mode and have easier mode with less buttons in the standard games.
+
+![Feedback Email](assets/images/feedback.JPG)
+
+### Lighthouse - Developer Chrome Tools
+
+Using the Google Chrome Developer tools, I had used Lighthouse within an icognito browser (due to extentison interference) to look at the overall quality of my site.
+<br>
+![Lighthouse Overview](assets/images/lighthouse/lighthouse-overview.png)
+<br>
+Although the overall quality over my site was a score of 91, the accessibility of my site could improve significantly.
+<br>
+![Lighthouse Accessibility](assets/images/lighthouse/lighthouse-accessibility.png)
+<br>
+I have recognised that some elements (Square buttons) were missing Aria attributes within them. I rectofied this by adding aria-label to my div buttons to improve this. As well as this, background and foreground colors do not have suffiecent contrast ratio.
+
+I had few diagnostics within the lighthouse section that could be improved.
+<br>
+![Lighthouse Diagnostics](assets/images/lighthouse/lighthouse-diagnostics.png)
+<br>
+Overall I understand how to resolve a few of them. However currently, "Serve static assets with an efficent cache policy", "Avoid serving legacy JavaScript to modern browers" and "Eliminate render-blocking resources" are things im not to sure how to resolve. I have read in to these diagnostics and have tried to improve on things that was within my capacity. Such as the contrasting with the slogan "Square Up" it was previously a yellow glow, though changing to a red/pink has removed this issue.
+
+### Validators
+
+W3c was used to validate HTML and CSS code.
+
+HTML Validator:
+![HTML Validator Overview Part 1](assets/images/validators/html-validator-error-button.png)
+![HTML Validator Overview Part 2](assets/images/validators/html-validator-error-paragraph.png)
+![HTML Validator Overview Part 3](assets/images/validators/html-validator-warning-javatype.png)
+![HTML Validator Overview Part 4](assets/images/validators/html-validator-info.png)
+
+Overall, I needed to neaten up my html by removing some attrtubutes (for attrbute within the submit button element and type within the script elements in the head). I also changed the paragraph element within the list element of how to play, as this was not allowed to - these were changed to a list item. I have noticed the info text, I had removed the "/" from the closing tags, due to the autosave extension I have the slash is automtically returned to the end of the self-closing element. This doesn't interfere with the web itself. However moving forward I will remove this extension to reduce the feedback within this validator. Once I had made the changes to the errors/warnings, I had a successful pass with no warnings and errors. (Though the info for the ending tags with the "/" still appeared as expected.)
+![HTML Validator - Pass](assets/images/validators/html-validator-no-error.png)
+
+CSS Validator:
+![CSS Validator](assets/images/validators/css-validator.png)
+
+There were nothing to report back or fix within my css as far as the validator is concencerned.
 
 ## Bugs
 
@@ -196,7 +243,7 @@ The game over alert will display when you incorrectly select the wrong button.
 - Sequence started immediately on page load, due to sequence function being called at the very start. I had removed this function from the pure game start.
 - Sequence didn't increase, it used all 9 buttons within one sequence, calling them one after another. However, It wouldn't increment. This was because I hadnt called the sequnence and combined it with "++".
 - New game would be called everytime, even when user was successful in copying sequence. I had mixed up a lot of the game logic. I had to restructer and go through the copy and remove some called functions.
-- EmailJS function work when email has been sent. Though the test email is not sending over. I beleive this is due to a limit cap.
+- EmailJS function work when email has been sent. When testing in the development or deployed area, it seems that there is a limit of how many emails are sent out.
 - (Not much of a bug)The original 9 buttons had been reduced to 6. As I wasnt sure how to increase difficulty once a user was successful due to how I incremeneted the sequence. I had removed 3 buttons and tried this game with 6 buttons and it naturally increases the difficulty.
 
 ## Deployments

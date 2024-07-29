@@ -4,6 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="assets/css/style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Teko:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Teko:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -36,11 +46,8 @@
       src="https://kit.fontawesome.com/730b9a0988.js"
       crossorigin="anonymous"
     ></script>
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
-    ></script>
-    <script type="text/javascript">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
       (function () {
         emailjs.init({
           publicKey: "0K5xPssRUC9IukuLi",
@@ -75,8 +82,8 @@
           - If you are successful, you can continue playing until a wrong move
           is made.
         </li>
-        <p>Note: The sequence will add one new button each success.</p>
-        <p>Good Luck!! 😊</p>
+        <li>Note: The sequence will add one new button each success.</li>
+        <li>Good Luck!! 😊</li>
       </ul>
     </div>
 
@@ -88,36 +95,42 @@
         data-id="button1"
         data-listener="false"
         role="button"
+        aria-label="Blue Square"
       ></div>
       <div
         class="square cyan grid-item"
         data-id="button2"
         data-listener="false"
         role="button"
+        aria-label="Cyan Square"
       ></div>
       <div
         class="square yellow grid-item"
         data-id="button3"
         data-listener="false"
         role="button"
+        aria-label="Yellow Square"
       ></div>
       <div
         class="square green grid-item"
         data-id="button4"
         data-listener="false"
         role="button"
+        aria-label="Green Square"
       ></div>
       <div
         class="square red grid-item"
         data-id="button5"
         data-listener="false"
         role="button"
+        aria-label="Red Square"
       ></div>
       <div
         class="square orange grid-item"
         data-id="button6"
         data-listener="false"
         role="button"
+        aria-label="Orange Square"
       ></div>
     </div>
 
@@ -143,12 +156,7 @@
           <label for="message">Message:</label>
           <textarea name="message" id="message" rows="6" required></textarea>
         </div>
-        <button
-          type="submit"
-          id="send-btn"
-          for="outer-form"
-          onclick="sendEmail()"
-        >
+        <button type="submit" id="send-btn" onclick="sendEmail()">
           Send Email
         </button>
       </form>
