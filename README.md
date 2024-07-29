@@ -169,9 +169,11 @@ The game over alert will display when you incorrectly select the wrong button.
 
 ## Future Feautres
 
-- I plan to have a ending level to cap the game once a certain level has been reached. In result, I would like to incorperate a winning celeberation on the screen for the successful users.
+- I plan to have a ending level to cap the game once a certain level has been reached. In result, I would like to incorperate a winning celeberation on the screen for the successful users. Or change the alerts to text elements on the page. 
 - Furthermore I would also like to add sound to the game, whether that is with the game buttons or putting an radio/api that alsos the user to play the game as well as listen to their favourite songs.
 - As well as this I would like to make the game visibly inactive if the game has not been started or provide a start menu that will take you to the game.
+- I would like to dive in to different colour schemes to improve user experience and accessibility for screen readers.
+- Within the furture, I would like to implent another mode as suggest in my testing section. This game could be a great challenge mode and have a standard game with less buttons but same game to make it less complex from the start. Also to add a count down on the start button for a new game and for each succussful round. 
 
 ## Accessibility
 
@@ -292,8 +294,8 @@ To clone this project to Gitpod use the following steps;
 - [EmailJS](https://www.emailjs.com/). Used to create email service for my feedback form.
 - [Am I responsive](https://ui.dev/amiresponsive). To show my website in different browsers for responsive design.
 - [Favicon](https://favicon.io/). To make and generate my website icon.
-- [HTML Validation]()
-- [CSS Validation]()
+- [HTML Validation](https://validator.w3.org/) - To validate my HTML Code.
+- [CSS Validation](https://jigsaw.w3.org/css-validator/) - To validate my CSS code.
 
 ### Code
 
