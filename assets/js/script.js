@@ -18,6 +18,7 @@ const game = {
   isDisplayingSequence: false, //control user input during sequence display
 };
 
+//Global variables//
 const startButton = document.getElementById("startButton");
 const scoreEl = document.getElementById("scores");
 
@@ -33,7 +34,6 @@ function updateScores() {
 // Listening for user input //
 document.addEventListener("DOMContentLoaded", () => {
   startButton.addEventListener("click", startNewGame);
-  document.getElementsByClassName("disable").classList.remove("disable");
 });
 
 // Adding .light css class //
@@ -44,7 +44,7 @@ function userClickHandler(event) {
 
     const dataId = button.dataset.id;
     game.usersMoves.push(dataId);
-
+    // Conditins for game//
     if (checkUserCorrect(dataId)) {
       if (sequenceComplete()) {
         userSuccessful();
@@ -55,6 +55,7 @@ function userClickHandler(event) {
   }
 }
 
+// Add the light class //
 function buttonLight(button) {
   button.classList.add("light");
   setTimeout(function () {
@@ -62,16 +63,19 @@ function buttonLight(button) {
   }, 300);
 }
 
+//Checking if user sequence matches //
 function checkUserCorrect(dataId) {
   // Geting the index of the current move in the sequence //
   const currentMoveIndex = game.usersMoves.length - 1;
   return dataId === game.currentGame[currentMoveIndex];
 }
 
+//Checking if user sequence is complete//
 function sequenceComplete() {
   return game.usersMoves.length === game.currentGame.length;
 }
 
+//If statement conditions as function for winning and failing the game //
 function userSuccessful() {
   game.score++; // incrementing score //
   updateScores(); // updates display //
@@ -87,6 +91,8 @@ function userSuccessful() {
     game.isDisplayingSequence = false;
   }, game.currentGame.length * 1000);
 }
+
+//If statement conditions as function for winning and failing the game //
 function gameOver() {
   window.alert("Ohh no, wrong button! Game over..");
   removeEventClick(); // To remove the click event listeners when game is over //
@@ -97,6 +103,7 @@ function gameOver() {
   game.usersMoves = [];
   game.currentGame = [];
 }
+
 // Adding Click Event Listener to Buttons //
 function userInputHandler() {
   game.buttons = document.querySelectorAll(".square");
@@ -124,7 +131,7 @@ function startNewGame() {
   game.score = 0;
   updateScores();
 
-  // Remove existing event listeners
+  // Removing existing event listeners
   removeEventClick();
 
   // Start a new sequence
@@ -139,6 +146,7 @@ function startNewGame() {
   }, game.currentGame.length * 1000);
 }
 
+//Adds a move to squares//
 function addMove() {
   const buttons = document.querySelectorAll(".square");
   if (buttons.length > 0) {
@@ -147,6 +155,7 @@ function addMove() {
   }
   console.log(game.currentGame);
 }
+
 // Pushing buttons to current game//
 function startCombination() {
   game.currentGame = [];
@@ -176,7 +185,7 @@ function flashLightsOn() {
   });
 }
 
-// to send email //
+//Send email function //
 function sendEmail() {
   // getting html form values//
   let param = {
