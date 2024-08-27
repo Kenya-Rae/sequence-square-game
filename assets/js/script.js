@@ -194,12 +194,50 @@ function sendEmail() {
     subject: document.getElementById("subject").value,
     message: document.getElementById("message").value,
   };
+
+  if (!param.email.trim()) {
+    alert("Please enter a valid email address.");
+    return;
+  }
+
+  if (!param.message.trim()) {
+    alert("Please provide a message.");
+    return;
+  }
+
+  if (!param.name.trim()) {
+    alert("Please provide a valid name.");
+    return;
+  }
   // using emailjs to send this email with values (parameters) and alert when done//
-  emailjs
-    .send("service_t8jb8bs", "template_bwta55d", param)
-    .then(
-      alert(
-        "Email has now been sent! Please wait 3-5 working days for a response."
-      )
-    );
+  emailjs.send("service_t8jb8bs", "template_bwta55d", param).then(
+    alert(
+      "Email has now been sent! Please wait 3-5 working days for a response."
+    ).catch((error) => {
+      console.error("Failed to send email:", error);
+      alert("There was an error sending your email.");
+    })
+  );
+}
+
+// Get the button:
+let mybutton = document.getElementById("scrollUp");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }

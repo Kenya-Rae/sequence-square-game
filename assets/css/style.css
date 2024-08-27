@@ -268,6 +268,32 @@ label {
   background-color: #afa386;
 }
 
+#scrollUp {
+  display: none;
+  position: fixed;
+  bottom: 80px;
+  right: 50px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: rgb(248, 248, 248);
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 18px;
+}
+
+#scrollUp:hover {
+  background-color: #555;
+}
+
+.fa-arrow-up {
+  font-weight: 900;
+  font-size: xx-large;
+  padding-left: 0px;
+  padding-top: 0px;
+  color: black;
+}
 /*--------Media Queries------ */
 /*-- Extra Small devices (portrait phones, 576px and less--*/
 @media only screen and (max-width: 375px) {
@@ -276,6 +302,12 @@ label {
     margin-top: 0px;
     top: 0px;
   }
+}
+#scrollUp {
+  position: sticky;
+  top: auto;
+  bottom: 0px;
+  margin-top: 10px;
 }
 
 @media (max-width: 575.98px) {
