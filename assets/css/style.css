@@ -72,6 +72,7 @@
   display: ruby-text;
   padding-left: 0px;
 }
+
 .list-inline,
 span {
   font-family: "Poppins", "Sans-Serif";
@@ -95,6 +96,7 @@ h3 {
   text-align: center;
   text-decoration: underline;
   color: black;
+  margin-left: 10px;
 }
 
 .footer {
@@ -236,15 +238,14 @@ button#instructionsButton {
 input,
 textarea {
   cursor: text;
-  width: 200px;
-}
-
-input#name {
   width: 135px;
 }
 
-input#email {
-  width: 135px;
+.subject {
+  margin-left: -10px;
+}
+.message {
+  margin-left: -13px;
 }
 
 label {
@@ -256,6 +257,7 @@ label {
   font-size: 15px;
   font-weight: bold;
   text-align: center;
+  margin-left: 15px;
   color: rgb(0, 0, 0);
   background-color: #f2e2ba;
   border-radius: 4px;

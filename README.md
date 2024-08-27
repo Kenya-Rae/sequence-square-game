@@ -91,7 +91,7 @@ As the site owner I want:
 
 ### Fonts
 
-- The font Teko was used for the main title and the sub-title of "How to Play?"
+- The font Teko was used for the main title and the sub-title of "How to Play?".
 - Poppins was used for the instructions on how to play and the footer elements.
 
 ### Icons
@@ -106,7 +106,7 @@ As the site owner I want:
 
 ### Images
 
-- Favicon Icon images can be found [Favicon](assets/images/favicon/)
+- Favicon Icon images can be found [Favicon](assets/images/favicon/).
 
 ### Video Files
 
@@ -114,8 +114,8 @@ As the site owner I want:
 
 ### Wireframes
 
-The design choices were decided over the development of this project. The Wireframes for the original design can be found [here](assets/images/wireframes/original/)
-The overall site has changed over development. This was due to the complexity it may have when building. As this is my first time working with JavaScript. I wanted to make something very simple and basic, due to where my skill set currently is. The wireframe for the final look can be found [here](assets/images/wireframes/finals/)
+The design choices were decided over the development of this project. The Wireframes for the original design can be found [here](assets/images/wireframes/original/).
+The overall site has changed over development. This was due to the complexity it may have when building. As this is my first time working with JavaScript. I wanted to make something very simple and basic, due to where my skill set currently is. The wireframe for the final look can be found [here](assets/images/wireframes/finals/).
 
 - Wireframes were created using [Balsamiq](https://balsamiq.com/).
 
@@ -209,6 +209,7 @@ The game-over alert will display when you incorrectly select the wrong button.
 | Start Button        | Start the game                                           | &#x2714; |
 | Instructions Button | Display how to play the game                             | &#x2714; |
 | Game Buttons        | Show the game sequence and allow user input to repeat it | &#x2714; |
+| Scroll Up Button    | Send user back to the top of the page.                   | &#x2714; |
 | Feedback Form       | Allow user input and send feedback email                 | &#x2714; |
 | Footer links        | Send user to correct pages                               | &#x2714; |
 
@@ -358,6 +359,7 @@ This current message is things I'm unable to resolve due to the submission date.
 - Sequence didn't increase, it used all 9 buttons within one sequence, calling them one after another. However, It wouldn't increment. This was because I hadn't called the sequence and combined it with "++".
 - A new game would be called every time, even when the user was successful in copying the sequence. I had mixed up a lot of the game logic. I had to restructure and go through the copy and remove some called functions.
 - EmailJS function works when an email has been sent. When testing in the development or deployed area, it seems that there is a limit to how many emails are sent out.
+- Feedback email could be sent without any user input. I provided my EmailJS function a try and catch block (which I had learned recently in Python) to provide an error when no user input has been given.
 - (Not much of a bug)The original 9 buttons had been reduced to 6. I wasn't sure how to increase difficulty once a user was successful due to how I incremented the sequence. I had removed 3 buttons and tried this game with 6 buttons and it naturally increases the difficulty.
 - (Not much of a bug)Whilst trying to disable my squares, I realised that I'm unable to disable and enable this due to these being div elements. I had tried to disable the play area until the game started but this ruined the structure of the page. Due to the deadline of this project, I'm unable to change the code to accommodate this. However, now obtain the information to not make this error again.
 
@@ -428,6 +430,7 @@ To fork this project from Gitpod, please follow the steps below;
 - [Toggle Hiding and Showing](https://www.w3schools.com/howto/howto_js_toggle_hide_show.asp) - How to get my toggle to work on the instructions.
 - [Bootstrap Media Queries](https://getbootstrap.com/docs/4.1/layout/overview/) - Used their basic media query for my project and put my CSS styling.
 - [Glowing Text](https://www.w3schools.com/howto/howto_css_glowing_text.asp) - Used to create a glowing effect on the "Square Up!" slogan.
+- [Back to the top](https://www.w3schools.com/howto/howto_js_scroll_to_top.asp) - Used to function to provide button, the ability to scroll up to the top of the page.
 
 ### Acknowledgments
 
