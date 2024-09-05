@@ -224,8 +224,12 @@ button#instructionsButton {
 
 /*-------Contact Form------- */
 .form-container {
-  display: ruby-text;
   padding-top: 15px;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
 }
 #outer-form {
   text-align: center;
@@ -304,12 +308,13 @@ label {
     margin-top: 0px;
     top: 0px;
   }
-}
-#scrollUp {
-  position: sticky;
-  top: auto;
-  bottom: 0px;
-  margin-top: 10px;
+
+  #scrollUp {
+    position: sticky;
+    top: auto;
+    bottom: 0px;
+    margin-top: 10px;
+  }
 }
 
 @media (max-width: 575.98px) {
