@@ -195,7 +195,10 @@ function sendEmail() {
     message: document.getElementById("message").value,
   };
 
-  if (!param.email.trim()) {
+  // Email validation regex pattern
+  const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (!param.email.trim() || !emailValid.test(param.email)) {
     alert("Please enter a valid email address.");
     return;
   }
